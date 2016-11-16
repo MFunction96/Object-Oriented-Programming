@@ -4,21 +4,22 @@
 #include <string>
 using namespace std;
 
-class SavingsAccount : public Account
+class Account
 {
 private:
-	Accumulator acc;
-	double rate;
+	string id;
+	double balance;
+	static double total;
 protected:
-	SavingsAccount(Date date, int id);
+	Account(Date date, int id);
 	void Record(Date date, double amount, string desc);
 	void Error(string msg) const;
 public:
-	void Deposit(Date date, double amount, string desc);
-	void Settle(Date date);
-	void Show() const;
-	void WithDraw(Date date, double amount, string desc);
 	int GetID() const;
 	double GetBalance() const;
 	static double GetTotal();
+	virtual void Deposit(int Date, double amount);
+	virtual void WithDraw(int Date, double amount);
+	virtual void Settle(int Date);
+	virtual void Show();
 };

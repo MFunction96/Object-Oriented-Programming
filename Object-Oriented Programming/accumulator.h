@@ -1,9 +1,17 @@
 #pragma once
-#include<Windows.h>
+#include "stdafx.h"
+#include "Date.h"
+#include <string>
+using namespace std;
 
-class accumulator
+class Accumulator
 {
 private:
-	DATE d;
-
+	double sum, value;
+	Date lastdate;
+public:
+	Accumulator(Date date, double value);
+	void Change(Date date, double value);
+	void Reset(Date date, double value);
+	double GetSum(Date date) const;
 };

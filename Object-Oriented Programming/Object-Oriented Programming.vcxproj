@@ -145,23 +145,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="accumulator.h" />
-    <ClInclude Include="creditaccount.h" />
-    <ClInclude Include="date.h" />
-    <ClInclude Include="savingsaccount.h" />
-    <ClInclude Include="base.h" />
-    <ClInclude Include="point.h" />
-    <ClInclude Include="rectangle.h" />
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="Accumulator.h" />
+    <ClInclude Include="CreditAccount.h" />
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="SavingsAccount.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="date.cpp" />
-    <ClCompile Include="savingsaccount.cpp" />
-    <ClCompile Include="base.cpp" />
     <ClCompile Include="Object-Oriented Programming.cpp" />
-    <ClCompile Include="point.cpp" />
-    <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

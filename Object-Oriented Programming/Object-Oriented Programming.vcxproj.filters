@@ -24,25 +24,19 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="point.h">
+    <ClInclude Include="Account.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="rectangle.h">
+    <ClInclude Include="Accumulator.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="base.h">
+    <ClInclude Include="CreditAccount.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="savingsaccount.h">
+    <ClInclude Include="SavingsAccount.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="creditaccount.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="accumulator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="date.h">
+    <ClInclude Include="Date.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -51,21 +45,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Object-Oriented Programming.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="point.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="rectangle.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="base.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="savingsaccount.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="date.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

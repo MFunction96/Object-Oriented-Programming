@@ -1,20 +1,20 @@
 #pragma once
-#include <ctime>
+#include "stdafx.h"
+#include "Date.h"
+#include <string>
+using namespace std;
 
-
-class date
+class Date
 {
 private:
-	
 	int year, month, day, totaldays;
 public:
-	date(int year, int month, int day);
-	Date
-	const void Show();
-	const bool IsLeapYear();
-	const int GetYear();
-	const int GetMonth();
-	const int GetDay();
-	const int GetMaxDay();
-	const int Distance(date date);
+	Date(int year, int month, int day);
+	void Show() const;
+	bool IsLeapYear() const ;
+	int GetYear() const;
+	int GetMonth() const;
+	int GetDay() const;
+	int GetMaxDay() const;
+	int operator- (const Date& date) const;
 };

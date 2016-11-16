@@ -11,11 +11,8 @@
 #include <tchar.h>
 #include <winerror.h>
 
-#include "point.h"
-//#include "date.h"
-#include<Windows.h>
-#include "savingsaccount.h"
-#include "rectangle.h"
-#include "base.h"
-
+#include "Account.h"
+#include "Accumulator.h"
+#include "CreditAccount.h"
+#include "SavingsAccount.h"
 // TODO:  在此处引用程序需要的其他头文件
