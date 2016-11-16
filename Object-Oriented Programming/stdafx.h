@@ -7,9 +7,15 @@
 
 #include "targetver.h"
 
-#include <stdio.h>
+#include <iostream>
 #include <tchar.h>
+#include <winerror.h>
 
-
+#include "point.h"
+//#include "date.h"
+#include<Windows.h>
+#include "savingsaccount.h"
+#include "rectangle.h"
+#include "base.h"
 
 // TODO:  在此处引用程序需要的其他头文件
