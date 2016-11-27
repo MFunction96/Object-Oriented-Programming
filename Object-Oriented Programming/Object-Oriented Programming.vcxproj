@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="Accumulator.cpp" />
+    <ClCompile Include="CreditAccount.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Object-Oriented Programming.cpp" />
     <ClCompile Include="SavingsAccount.cpp" />
