@@ -50,5 +50,8 @@
     <ClCompile Include="Date.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Accumulator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

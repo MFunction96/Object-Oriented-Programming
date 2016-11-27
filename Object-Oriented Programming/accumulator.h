@@ -10,8 +10,8 @@ private:
 	double sum, value;
 	Date lastdate;
 public:
-	Accumulator(Date date, double value);
-	void Change(Date date, double value);
-	void Reset(Date date, double value);
-	double GetSum(Date date) const;
+	Accumulator(const Date & date, double value);
+	void Change(const Date & date, double value);
+	void Reset(const Date & date, double value);
+	double GetSum(const Date &date) const;
 };
