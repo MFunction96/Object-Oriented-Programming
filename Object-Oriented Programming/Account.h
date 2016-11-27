@@ -11,15 +11,15 @@ private:
 	double balance;
 	static double total;
 protected:
-	Account(Date date, int id);
-	void Record(Date date, double amount, string desc);
-	void Error(string msg) const;
+	Account(const Date & date, const string & id);
+	void Record(const Date & date, double amount, const string & desc);
+	void Error(const string & msg) const;
 public:
-	int GetID() const;
+	const string & GetID() const;
 	double GetBalance() const;
 	static double GetTotal();
-	virtual void Deposit(int Date, double amount);
-	virtual void WithDraw(int Date, double amount);
-	virtual void Settle(int Date);
-	virtual void Show();
+	virtual void Deposit(const Date & date, double amount, const string & desc) = 0;
+	virtual void WithDraw(const Date & date, double amount, const string & desc) = 0;
+	virtual void Settle(const Date & date) = 0;
+	virtual void Show() const;
 };
