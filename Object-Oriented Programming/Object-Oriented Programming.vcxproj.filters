@@ -56,5 +56,8 @@
     <ClCompile Include="Account.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SavingsAccount.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
