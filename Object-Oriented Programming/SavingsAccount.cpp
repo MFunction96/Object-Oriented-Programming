@@ -5,13 +5,13 @@ SavingsAccount::SavingsAccount(const Date & date, const string & id, double rate
 
 }
 
-void SavingsAccount::Deposit(Date date, double amount, string desc)
+void SavingsAccount::Deposit(const Date & date, double amount, const string & desc)
 {
 	Record(date, amount, desc);
 	acc.Change(date, GetBalance());
 }
 
-void SavingsAccount::Settle(Date date)
+void SavingsAccount::Settle(const Date & date)
 {
 	double interest = acc.GetSum(date) * rate / (date - Date(date.GetYear() - 1, 1, 1));
 	if (interest)
@@ -21,7 +21,7 @@ void SavingsAccount::Settle(Date date)
 	acc.Reset(date, GetBalance());
 }
 
-void SavingsAccount::WithDraw(Date date, double amount, string desc)
+void SavingsAccount::WithDraw(const Date & date, double amount, const string & desc)
 {
 	if (amount > GetBalance())
 	{

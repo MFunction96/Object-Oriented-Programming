@@ -5,7 +5,7 @@ namespace
 	const int DAYS_BEFORE_MONTH[] = { 0,31,59,90,120,151,181,212,243,273,304,334,365 };
 }
 
-Date::Date(int year, int month, int day)
+Date::Date(int year, int month, int day) : year(year), month(month), day(day)
 {
 	if (day <= 0 || day > GetMaxDay())
 	{

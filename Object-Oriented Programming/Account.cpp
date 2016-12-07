@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+double Account::total = 0;
+
 Account::Account(const Date & date, const string & id) :id(id), balance(0)
 {
 	date.Show();
