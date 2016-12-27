@@ -8,6 +8,8 @@
 #include "targetver.h"
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include <tchar.h>
 #include <winerror.h>
 

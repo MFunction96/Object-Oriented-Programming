@@ -29,6 +29,11 @@ bool Date::IsLeapYear() const
 	return year % 4 == 0 && year % 100 || year % 400 == 0;
 }
 
+bool Date::operator<(const Date & date) const
+{
+	return totaldays < date.totaldays;
+}
+
 int Date::GetYear() const
 {
 	return year;
@@ -53,4 +58,19 @@ int Date::GetMaxDay() const
 int Date::operator-(const Date & date) const
 {
 	return totaldays - date.totaldays;
+}
+
+istream & operator >> (istream & in, Date & date)
+{
+	char c1, c2;
+	int year, month, day;
+	in >> year >> c1 >> month >> c2 >> day;
+	date = Date(year, month, day);
+	return in;
+}
+
+ostream & operator<<(ostream & out, const Date & date)
+{
+	out << date.GetYear() << "-" << date.GetMonth() << "-" << date.GetDay();
+	return out;
 }
