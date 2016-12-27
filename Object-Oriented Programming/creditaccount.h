@@ -19,5 +19,5 @@ public:
 	void Deposit(const Date & date, double amount, const string & desc);
 	void WithDraw(const Date & date, double amount, const string & desc);
 	void Settle(const Date &date);
-	void Show() const;
+	void Show(ostream & out) const;
 };

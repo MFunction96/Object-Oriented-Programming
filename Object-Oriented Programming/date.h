@@ -13,6 +13,7 @@ public:
 	void Show() const;
 	bool IsLeapYear() const;
 	bool operator<(const Date & date) const;
+	bool operator<=(const Date & date) const;
 	int GetYear() const;
 	int GetMonth() const;
 	int GetDay() const;

@@ -34,6 +34,11 @@ bool Date::operator<(const Date & date) const
 	return totaldays < date.totaldays;
 }
 
+bool Date::operator<=(const Date & date) const
+{
+	return totaldays <= date.totaldays;
+}
+
 int Date::GetYear() const
 {
 	return year;

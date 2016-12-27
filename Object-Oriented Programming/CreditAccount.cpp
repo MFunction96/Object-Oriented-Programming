@@ -72,8 +72,8 @@ void CreditAccount::Settle(const Date & date)
 	acc.Reset(date, GetDebt());
 }
 
-void CreditAccount::Show() const
+void CreditAccount::Show(ostream & out) const
 {
-	Account::Show();
-	cout << "\tAvailable credit:" << GetAvailableCredit() << endl;
+	Account::Show(out);
+	out << "\tAvailable credit:" << GetAvailableCredit() << endl;
 }

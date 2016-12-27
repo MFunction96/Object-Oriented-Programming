@@ -10,6 +10,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <map>
 #include <tchar.h>
 #include <winerror.h>
 
