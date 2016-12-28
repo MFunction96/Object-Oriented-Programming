@@ -7,9 +7,11 @@
 
 #include "targetver.h"
 
+#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <vector>
 #include <map>
 #include <tchar.h>
 #include <winerror.h>
@@ -18,4 +20,5 @@
 #include "Accumulator.h"
 #include "CreditAccount.h"
 #include "SavingsAccount.h"
+#include "Controller.h"
 // TODO:  在此处引用程序需要的其他头文件
