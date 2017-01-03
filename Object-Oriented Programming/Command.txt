@@ -13,3 +13,4 @@ c 5
 d 0 5500 salary
 n
 n
+c 15

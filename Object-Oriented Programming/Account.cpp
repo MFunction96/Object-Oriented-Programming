@@ -14,6 +14,7 @@ void Account::Record(const Date & date, double amount, const string & desc)
 	amount = floor(amount * 100 + 0.5) / 100;
 	balance += amount;
 	total += amount;
+	recordmap.insert(pair<Date, AccountRecord>(date, AccountRecord(date, this, amount, balance, desc)));
 	date.Show();
 	cout << "\t#" << id << "\t" << amount << "\t" << balance << "\t" << desc << endl;
 }
