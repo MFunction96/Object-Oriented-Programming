@@ -5,7 +5,6 @@ RecordMap Account::recordmap;
 
 Account::Account(const Date & date, const string & id) :id(id), balance(0)
 {
-	date.Show();
 	cout << date << "\t#" << id << " created" << endl;
 }
 
@@ -63,7 +62,7 @@ inline ostream & operator<<(ostream & out, const Account & accout)
 	return out;
 }
 
-AccountRecord::AccountRecord(const Date & date, const Account * account, double amount, double balance, const string desc) :
+AccountRecord::AccountRecord(const Date & date, const Account * account, double amount, double balance, const string & desc) :
 	date(date), account(account), amount(amount), balance(balance), desc(desc) 
 {
 

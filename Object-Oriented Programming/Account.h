@@ -17,7 +17,7 @@ private:
 	double balance;
 	string desc;
 public:
-	AccountRecord(const Date & date, const Account * account, double amount, double balance, const string desc);
+	AccountRecord(const Date & date, const Account * account, double amount, double balance, const string & desc);
 	void Show() const;
 };
 

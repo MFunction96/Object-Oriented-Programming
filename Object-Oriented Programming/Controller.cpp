@@ -74,30 +74,16 @@ bool Controller::RunCommand(const string & cmdline)
 	else if (cmd == 'c')
 	{
 		str >> day;
-		if (day < date.GetDay())
-		{
-			cout << "You cannot specify a previous day";
-		}
-		else if (day > date.GetMaxDay())
-		{
+		if (day < date.GetDay()) cout << "You cannot specify a previous day";
+		else if (day > date.GetMaxDay()) 
 			cout << "Invaliday";
-		}
-		else
-		{
-			date = Date(date.GetYear(), date.GetMonth(), day);
-		}
+		else date = Date(date.GetYear(), date.GetMonth(), day);
 		return true;
 	}
 	else if (cmd == 'n')
 	{
-		if (date.GetMonth() == 12)
-		{
-			date = Date(date.GetYear() + 1, 1, 1);
-		}
-		else
-		{
-			date = Date(date.GetYear(), date.GetMonth() + 1, 1);
-		}
+		if (date.GetMonth() == 12) date = Date(date.GetYear() + 1, 1, 1);
+		else date = Date(date.GetYear(), date.GetMonth() + 1, 1);
 		for (vector<Account *>::iterator iter = accounts.begin(); iter != accounts.end(); iter++)
 		{
 			(*iter)->Settle(date);

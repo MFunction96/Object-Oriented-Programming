@@ -14,19 +14,13 @@ void SavingsAccount::Deposit(const Date & date, double amount, const string & de
 void SavingsAccount::Settle(const Date & date)
 {
 	double interest = acc.GetSum(date) * rate / (date - Date(date.GetYear() - 1, 1, 1));
-	if (interest)
-	{
-		Record(date, interest, "interest");
-	}
+	if (interest) Record(date, interest, "interest");
 	acc.Reset(date, GetBalance());
 }
 
 void SavingsAccount::WithDraw(const Date & date, double amount, const string & desc)
 {
-	if (amount > GetBalance())
-	{
-		Error("not enough money");
-	}
+	if (amount > GetBalance()) Error("not enough money");
 	else
 	{
 		Record(date, -amount, desc);

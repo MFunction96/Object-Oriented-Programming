@@ -29,14 +29,8 @@ double CreditAccount::GetFee() const
 
 double CreditAccount::GetAvailableCredit() const
 {
-	if (GetBalance() < 0)
-	{
-		return credit + GetBalance();
-	}
-	else
-	{
-		return credit;
-	}
+	if (GetBalance() < 0) return credit + GetBalance();
+	else return credit;
 }
 
 void CreditAccount::Deposit(const Date & date, double amount, const string & desc)
@@ -47,10 +41,7 @@ void CreditAccount::Deposit(const Date & date, double amount, const string & des
 
 void CreditAccount::WithDraw(const Date & date, double amount, const string & desc)
 {
-	if (amount - GetBalance() > credit)
-	{
-		Error("not enough credit");
-	}
+	if (amount - GetBalance() > credit) Error("not enough credit");
 	else
 	{
 		Record(date, -amount, desc);
@@ -61,14 +52,8 @@ void CreditAccount::WithDraw(const Date & date, double amount, const string & de
 void CreditAccount::Settle(const Date & date)
 {
 	double interest = acc.GetSum(date) * rate;
-	if (interest)
-	{
-		Record(date, interest, "interest");
-	}
-	if (date.GetMonth() == 1)
-	{
-		Record(date, -fee, "annual fee");
-	}
+	if (interest) Record(date, interest, "interest");
+	if (date.GetMonth() == 1) Record(date, -fee, "annual fee");
 	acc.Reset(date, GetDebt());
 }
 
